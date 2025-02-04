@@ -7,7 +7,7 @@ let transitionTime = 400;
 const itemsEle = document.querySelector('.items');
 
 const numOfItems = document.querySelectorAll('.items .item').length;
-
+//Set fixed height of items container
 document.querySelector('.items').style.height = (numOfItems * 70) + (numOfItems * 10) + 'px';
 
 function positionItems(insertIndex = null){
@@ -41,7 +41,7 @@ function positionItemsInOrder(){
         item.setAttribute('order', index + 1);
     });
     resetTransition = true;
-    
+    //When transition is over
     setTimeout(function(){
         while(itemsEle.firstChild){
             itemsEle.removeChild(itemsEle.lastChild);
@@ -78,7 +78,7 @@ addEventListener('mousemove', function(e){
     selectedItem.style.left = offsetX + 'px';
     // let itemsList = document.querySelectorAll('.items .item'); itemsList = Array.prototype.slice.call(itemsList); itemsList = itemsList.filter(item => item.getAttribute('selected') !== 'yes');
     let orderOfSelectedItem = Number(selectedItem.getAttribute('order'));
-   
+    //Test for new position
     if(orderOfSelectedItem !== 1){
         let beforeItem = document.querySelector(`.items .item[order*="${orderOfSelectedItem - 1}"]`);
         let beforeMiddle = pos.y < beforeItem.offsetTop + (beforeItem.clientHeight / 2);
