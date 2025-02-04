@@ -1,0 +1,84 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-family: Prompt, serif;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+    background-image: url("forestblue.jpg");
+
+}
+
+.msg{
+    color: aliceblue;
+    margin-bottom: 35px;
+    font-size: 24px;
+    
+    padding: 5px;
+}
+
+.msg:hover {
+    color:#BFDBF1;
+    margin-bottom: 30px;
+    font-size: 25px;
+    border-bottom: 4px #BFDBF1 solid;
+    border-right: 4px #BFDBF1 dashed;
+    border-left: 4px #BFDBF1 dashed;
+    border-radius: 20px;
+    padding: 5px;
+}
+#icon{
+    position: relative;
+    top: 3px;
+
+}
+
+.main{
+    background: transparent;
+    padding: 100px;
+    border-radius: 30px;
+    border: solid 2px rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 8px 2px #152837;
+    
+    
+}
+
+
+.items{
+    position: relative;
+    width: 500px;
+    margin:00px;
+}
+
+.item{
+    position: absolute;
+    /*background-color: #b1cde3;*/
+    color: #152837;
+    width: 500px;
+    left: 0;
+    height: 70px;
+    line-height: 70px;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 4px #152837 solid;
+    border-right: 4px #152837 dashed;
+    border-left: 4px #152837 dashed;
+    border-radius: 20px;
+    
+}
